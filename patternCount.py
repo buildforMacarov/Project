@@ -18,4 +18,9 @@ def FrequentWords(Text, k):
     for i in Count:
         if Count[i] == m:
             FrequentPatterns.append(Text[i:i+k])
-    return FrequentPatterns
+    return remove_duplicates(FrequentPatterns)
+
+
+def remove_duplicates(Items):
+    ItemsNoDuplicates = [] # output variable
+    return list(set(Items))    

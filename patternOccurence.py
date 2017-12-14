@@ -7,9 +7,12 @@ def PatternMatching(Pattern, Genome):
     start = 0
     while (start < (len(genome) - len(pattern)) + 1):
     	position = genome.find(pattern,start)
-    	start = genome.find(pattern,start) + 1
-    	positions.append(position)
-    return positions
+    	start = start + 1
+    	if (position == -1):
+    		pass
+    	else:
+    		positions.append(position)
+    return list(set(positions))
 
 inp = input("Enter Genome: ")
 pat = input("Enter Pattern: ")
